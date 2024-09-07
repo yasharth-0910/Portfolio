@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { FaGithub, FaLinkedin, FaTwitter, FaLink, FaBars, FaTimes } from 'react-icons/fa'
 import { MdArrowOutward } from "react-icons/md";
-import {MoveUpRight} from "lucide-react"
+// import {MoveUpRight} from "lucide-react"
 
 
 const skills = [
