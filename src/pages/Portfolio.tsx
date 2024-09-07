@@ -89,7 +89,7 @@ export default function Portfolio() {
       <header className="md:hidden bg-gray-900 p-4 flex justify-between items-center sticky top-0 z-50">
         <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Yasharth Singh</h1>
         <button 
-          className="text-cyan-400 p-2 rounded-full"
+          className="text-cyan-400 p-2 rounded-full hover:bg-gray-800 transition-colors duration-200"
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         >
           {isSidebarOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -104,14 +104,16 @@ export default function Portfolio() {
           ${isSidebarOpen ? 'fixed inset-0 z-40' : 'hidden md:flex'}
         `}>
           <div>
-            <div className="mb-10 p-4 md:p-0">
-              <h1 className="text-2xl md:text-3xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Yasharth Singh</h1>
-              <p className="text-lg md:text-xl text-cyan-300 font-semibold">
-                Computer Science Engineering Student
-              </p>
-              <p className="text-base md:text-lg text-gray-300 mt-2">
-                Jaypee Institute of Information Technology, Noida
-              </p>
+            <div className="mb-10 p-4 md:p-0 space-y-4">
+              <h1 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Yasharth Singh</h1>
+              <div className="space-y-2">
+                <p className="text-lg md:text-xl text-cyan-300 font-semibold">
+                  Computer Science Engineering Student
+                </p>
+                <p className="text-base md:text-lg text-gray-400">
+                  Jaypee Institute of Information Technology, Noida
+                </p>
+              </div>
             </div>
             <nav className="space-y-2 p-4 md:p-0">
               {sections.map((section) => (
@@ -128,7 +130,7 @@ export default function Portfolio() {
             </nav>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-700 p-4 md:p-0">
-            <div className="flex justify-center space-x-6 mb-4">
+            <div className="flex justify-center space-x-6 mb-4 pt-4">
               <a href="https://github.com/yasharth-0910" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">
                 <FaGithub className="h-6 w-6" />
               </a>
@@ -160,26 +162,26 @@ export default function Portfolio() {
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Projects</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {projects.map((project, index) => (
-                <div key={index} className="bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-cyan-500/30 hover:bg-gray-700 cursor-pointer"
+                <div key={index} className="bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-cyan-500/30 hover:bg-gray-700 cursor-pointer group"
                   onClick={() => window.open(project.repo, '_blank')}>
                   <div className="p-6">
-                    <h3 className="text-xl md:text-2xl font-semibold mb-3 text-cyan-300">{project.name}</h3>
+                    <h3 className="text-xl md:text-2xl font-semibold mb-3 text-cyan-300 group-hover:text-cyan-200 transition-colors duration-200">{project.name}</h3>
                     <p className="text-gray-300 mb-4 text-sm md:text-base">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.skills.map((skill, i) => (
                         <span key={i} className="px-2 py-1 bg-cyan-900 text-cyan-200 text-xs md:text-sm rounded-full">{skill}</span>
                       ))}
                     </div>
-                    <p className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 flex items-center text-sm md:text-base">
-                      View on GitHub <MdArrowOutward className="ml-1" />
+                    <p className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200 flex items-center text-sm md:text-base">
+                      View on GitHub <MdArrowOutward className="ml-1 group-hover:translate-x-1 transition-transform duration-200" />
                     </p>
                   </div>
                 </div>
               ))}
             </div>
             <div className="mt-8">
-              <a href="https://projects.yasharth.in" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-base md:text-lg flex items-center">
-                Explore More Projects <MdArrowOutward className="ml-1" />
+              <a href="https://projects.yasharth.in" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-base md:text-lg flex items-center group">
+                Explore More Projects <MdArrowOutward className="ml-1 group-hover:translate-x-1 transition-transform duration-200" />
               </a>
             </div>
           </section>
@@ -219,16 +221,15 @@ export default function Portfolio() {
           </section>
 
           <section id="resume" ref={sectionRefs.current[4]} className="mb-24">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Resume</h2>
-            <a 
-              href="src\Resume.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-cyan-600 hover:bg-cyan-700 text-white text-base md:text-lg py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 inline-block shadow-lg shadow-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/50"
-            >
-              Download Resume
-            </a>
-          </section>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Resume</h2>
+          <a 
+            href="/Yasharth-Resume.pdf" 
+            download="Yasharth-Resume.pdf"
+            className="bg-cyan-600 hover:bg-cyan-700 text-white text-base md:text-lg py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 inline-block shadow-lg shadow-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/50"
+          >
+            Download Resume
+          </a>
+        </section>
         </main>
       </div>
     </div>
