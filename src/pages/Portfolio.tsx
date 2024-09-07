@@ -1,8 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { FaGithub, FaLinkedin, FaTwitter, FaLink, FaBars, FaTimes } from 'react-icons/fa'
-import { MdArrowOutward } from "react-icons/md";
-// import {MoveUpRight} from "lucide-react"
-
+import { MdArrowOutward } from "react-icons/md"
 
 const skills = [
   "JavaScript", "TypeScript", "PHP", "C/C++", "React", "Context API", "Recoil", "Redux",
@@ -87,32 +85,32 @@ export default function Portfolio() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#121212] text-white font-sans flex flex-col md:flex-row">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-gray-100 font-sans flex flex-col md:flex-row">
       <button 
-        className="md:hidden fixed top-4 left-4 z-50 bg-[#1DB954] text-white p-2 rounded-full"
+        className="md:hidden fixed top-4 left-4 z-50 bg-cyan-600 text-white p-2 rounded-full shadow-lg shadow-cyan-500/50"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
         {isSidebarOpen ? <FaTimes /> : <FaBars />}
       </button>
 
-      <aside className={`w-full md:w-1/4 bg-black p-4 md:p-8 md:fixed md:h-full overflow-auto flex flex-col justify-between transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
+      <aside className={`w-full md:w-1/4 bg-gray-900 bg-opacity-95 backdrop-blur-lg p-6 md:p-8 md:fixed md:h-full overflow-auto flex flex-col justify-between transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
         <div>
-          <div className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold mb-2 text-[#1DB954]">Yasharth Singh</h1>
-            <p className="text-lg md:text-xl text-gray-300">
+          <div className="mb-10">
+            <h1 className="text-3xl md:text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Yasharth Singh</h1>
+            <p className="text-xl md:text-2xl text-cyan-300 font-semibold">
               Computer Science Engineering Student
             </p>
-            <p className="text-md md:text-lg text-gray-400">
+            <p className="text-lg md:text-xl text-gray-300 mt-2">
               Jaypee Institute of Information Technology, Noida
             </p>
           </div>
-          <nav className="space-y-2">
+          <nav className="space-y-3">
             {sections.map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
-                className={`block w-full text-left py-2 px-4 rounded transition-colors duration-200 ${
-                  activeSection === section ? 'bg-[#1DB954] text-white' : 'text-gray-300 hover:bg-gray-800'
+                className={`block w-full text-left py-3 px-4 rounded text-lg transition-all duration-300 ${
+                  activeSection === section ? 'bg-cyan-600 text-white shadow-lg shadow-cyan-500/50' : 'text-gray-300 hover:bg-gray-800 hover:text-cyan-300 hover:shadow-md hover:shadow-cyan-500/30'
                 }`}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -120,104 +118,104 @@ export default function Portfolio() {
             ))}
           </nav>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-700">
-          <div className="flex justify-center space-x-4 mb-4">
-            <a href="https://github.com/yasharth-0910" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#1DB954] transition-colors duration-200">
-              <FaGithub className="h-6 w-6" />
+        <div className="mt-10 pt-8 border-t border-gray-700">
+          <div className="flex justify-center space-x-6 mb-4">
+            <a href="https://github.com/yasharth-0910" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">
+              <FaGithub className="h-7 w-7" />
             </a>
-            <a href="https://www.linkedin.com/in/yasharth-singh-b2493b284/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#1DB954] transition-colors duration-200">
-              <FaLinkedin className="h-6 w-6" />
+            <a href="https://www.linkedin.com/in/yasharth-singh-b2493b284/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">
+              <FaLinkedin className="h-7 w-7" />
             </a>
-            <a href="https://x.com/Yash_mera_naam" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#1DB954] transition-colors duration-200">
-              <FaTwitter className="h-6 w-6" />
+            <a href="https://x.com/Yash_mera_naam" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">
+              <FaTwitter className="h-7 w-7" />
             </a>
-            <a href="https://linktr.ee/Singh_Yasharth" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#1DB954] transition-colors duration-200">
-              <FaLink className="h-6 w-6" />
+            <a href="https://linktr.ee/Singh_Yasharth" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">
+              <FaLink className="h-7 w-7" />
             </a>
           </div>
         </div>
       </aside>
 
-      <main className="w-full md:w-3/4 md:ml-[25%] p-4 md:p-8 space-y-12">
-        <section id="home" ref={sectionRefs.current[0]} className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#1DB954]">About Me</h2>
-          <p className="text-md md:text-lg leading-relaxed mb-6 text-gray-300 max-w-2xl">
+      <main className="w-full md:w-3/4 md:ml-[25%] p-6 md:p-10 space-y-16">
+        <section id="home" ref={sectionRefs.current[0]} className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">About Me</h2>
+          <p className="text-lg md:text-xl leading-relaxed mb-6 text-gray-200 max-w-3xl">
           My name is Yasharth Singh, a 2nd-year CSE student with a primary interest in Web Development. I am proficient
           in various frontend and backend technologies, with foundational knowledge in DevOps, website security, and
           real-time communication. My projects span different tech stacks, from Next.js to React. I am passionate about
-          creating innovative solutions that challenge me and offer opportunities to learn and grow
+          creating innovative solutions that challenge me and offer opportunities to learn and grow.
           </p>
         </section>
 
-        <section id="projects" ref={sectionRefs.current[1]} className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#1DB954]">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section id="projects" ref={sectionRefs.current[1]} className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Projects</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <div key={index} className="bg-[#181818] rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:bg-[#282828] cursor-pointer"
+              <div key={index} className="bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-cyan-500/30 hover:bg-gray-700 cursor-pointer"
                 onClick={() => window.open(project.repo, '_blank')}>
                 <div className="p-6">
-                  <h3 className="text-xl md:text-2xl font-semibold mb-2 text-white">{project.name}</h3>
-                  <p className="text-gray-400 mb-4">{project.description}</p>
+                  <h3 className="text-2xl font-semibold mb-3 text-cyan-300">{project.name}</h3>
+                  <p className="text-gray-300 mb-4 text-base">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.skills.map((skill, i) => (
-                      <span key={i} className="px-2 py-1 bg-[#1DB954] text-black text-xs rounded-full">{skill}</span>
+                      <span key={i} className="px-3 py-1 bg-cyan-900 text-cyan-200 text-sm rounded-full">{skill}</span>
                     ))}
                   </div>
-                  <p className="text-[#1DB954] hover:underline">View on GitHub <MdArrowOutward className="inline-block" /> </p>
+                  <p className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 flex items-center">
+                    View on GitHub <MdArrowOutward className="ml-1" />
+                  </p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-6">
-            <a href="https://projects.yasharth.in" className="text-[#1DB954] hover:underline text-lg">
-              Explore More Projects <MdArrowOutward className="inline-block" />
+          <div className="mt-8">
+            <a href="https://projects.yasharth.in" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-lg flex items-center">
+              Explore More Projects <MdArrowOutward className="ml-1" />
             </a>
           </div>
         </section>
 
-        <section id="skills" ref={sectionRefs.current[2]} className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#1DB954]">Skills</h2>
+        <section id="skills" ref={sectionRefs.current[2]} className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Skills</h2>
           <div className="flex flex-wrap gap-3">
             {skills.map((skill, index) => (
-              <span key={index} className="px-3 py-1 bg-[#181818] text-[#1DB954] border border-[#1DB954] rounded-full text-sm transition-all duration-300 hover:bg-[#1DB954] hover:text-black cursor-default">
+              <span key={index} className="px-4 py-2 bg-gray-800 text-cyan-300 rounded-full text-base transition-all duration-300 hover:bg-cyan-900 hover:text-white hover:shadow-md hover:shadow-cyan-500/30 cursor-default">
                 {skill}
               </span>
             ))}
           </div>
         </section>
 
-        <section id="responsibilities" ref={sectionRefs.current[3]} className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#1DB954]">Positions of Responsibility</h2>
-          <div className="bg-[#181818] rounded-lg p-6 shadow-lg">
-            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-white">CICR</h3>
-            <div className="space-y-4">
+        <section id="responsibilities" ref={sectionRefs.current[3]} className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Positions of Responsibility</h2>
+          <div className="bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+            <h3 className="text-2xl font-semibold mb-4 text-cyan-300">CICR</h3>
+            <div className="space-y-6">
               <div>
-                <h4 className="text-lg md:text-xl font-medium text-[#1DB954]">2023 - Aug 2024 (Volunteer)</h4>
-                <p className="text-gray-300">
-                  • Contributed to organizing tech events and workshops
-                  <br />
-                  • Assisted in managing the club's social media presence
-                </p>
+                <h4 className="text-xl font-medium text-cyan-400 mb-2">2023 - Aug 2024 (Volunteer)</h4>
+                <ul className="text-gray-200 list-disc list-inside space-y-1">
+                  <li>Contributed to organizing tech events and workshops</li>
+                  <li>Assisted in managing the club's social media presence</li>
+                </ul>
               </div>
               <div>
-                <h4 className="text-lg md:text-xl font-medium text-[#1DB954]">Aug 2024 - Present (Core Team Member)</h4>
-                <p className="text-gray-300">
-                  • Lead the development of the club's official website
-                  <br />
-                  • Coordinate with other team members to plan and execute tech initiatives
-                </p>
+                <h4 className="text-xl font-medium text-cyan-400 mb-2">Aug 2024 - Present (Core Team Member)</h4>
+                <ul className="text-gray-200 list-disc list-inside space-y-1">
+                  <li>Lead the development of the club's official website</li>
+                  <li>Coordinate with other team members to plan and execute tech initiatives</li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
         <section id="resume" ref={sectionRefs.current[4]} className="mb-24">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#1DB954]">Resume</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Resume</h2>
           <a 
             href="src\Resume.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-[#1DB954] hover:bg-[#1ED760] text-black text-lg py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 inline-block"
+            className="bg-cyan-600 hover:bg-cyan-700 text-white text-lg py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 inline-block shadow-lg shadow-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/50"
           >
             Download Resume
           </a>
