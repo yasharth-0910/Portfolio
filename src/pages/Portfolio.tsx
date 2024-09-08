@@ -13,19 +13,19 @@ const skills = [
 const projects = [
   { 
     name: "Live Link", 
-    skills: ["React", "Node.js", "WebRTC", "Socket.io", "Tailwind CSS"], 
+    skills: ["React js", "Node.js", "WebRTC", "Socket.io", "Tailwind CSS", "shad CN"], 
     repo: "https://github.com/yasharth-0910/LiveLink",
     description: "Live Link is a real-time video conferencing app with screen sharing capabilities. It includes a signaling server implemented using Socket.IO to manage connection establishment and media stream signaling. The app features functionalities like mic/camera toggling, remote video muting, and real-time status updates. Error handling and Socket.IO reconnections are optimized for consistent performance, ensuring a seamless and user-friendly experience."
   },
   { 
     name: "We-Talk", 
-    skills: ["React", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL","JWT","Node.js"], 
+    skills: ["React js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL","JWT","Node.js"], 
     repo: "https://github.com/yasharth-0910/We-Talks",
     description: "We-Talk is a blogging website where users can sign up, create accounts, and publish blogs. The platform uses TypeScript and Prisma for efficient back-end management and PostgreSQL for database handling. Users can manage their content, and each post is timestamped, providing a user-friendly platform for content creation and management."
   },
   { 
     name: "Kaze India", 
-    skills: ["Next js", "Postgress", "MongoDB", "Tailwind CSS", "shad CN"], 
+    skills: ["Next js", "Postgress", "MongoDB", "Tailwind CSS", "shad CN", "prisma"], 
     repo: "https://github.com/yasharth-0910/Kaze-India",
     description: "Kaze India is a mobile payment app that allows users to sign up, add money to their wallet via net banking, and transfer money to others using their mobile number. The app ensures secure authentication and smooth transaction handling, providing a seamless and user-friendly platform for digital payments and peer-to-peer money transfers."
   },
@@ -107,7 +107,7 @@ export default function Portfolio() {
             <div className="mb-10 p-4 md:p-0 space-y-4">
               <h1 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Yasharth Singh</h1>
               <div className="space-y-2">
-                <p className="text-lg md:text-xl text-cyan-300 font-semibold">
+                <p className="text-lg md:text-xl pt-3 text-cyan-300 font-semibold">
                   Computer Science Engineering Student
                 </p>
                 <p className="text-base md:text-lg text-gray-400">
@@ -151,10 +151,9 @@ export default function Portfolio() {
           <section id="home" ref={sectionRefs.current[0]} className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">About Me</h2>
             <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-200 max-w-3xl">
-            My name is Yasharth Singh, a 2nd-year CSE student with a primary interest in Web Development. I am proficient
-            in various frontend and backend technologies, with foundational knowledge in DevOps, website security, and
-            real-time communication. My projects span different tech stacks, from Next.js to React. I am passionate about
-            creating innovative solutions that challenge me and offer opportunities to learn and grow.
+            I am Yasharth Singh, a 2nd-year Computer Science student with a deep passion for Web Development. My expertise spans both frontend and backend technologies, including the latest frameworks and tools, with a solid foundation in DevOps, website security, and real-time communication.
+
+I have worked on diverse projects using tech stacks like Next.js, React, and more, always seeking innovative solutions that push boundaries and fuel my curiosity. I am dedicated to continuous learning and excited to tackle new challenges that drive growth and impact.
             </p>
           </section>
 
@@ -207,12 +206,13 @@ export default function Portfolio() {
                   <ul className="text-gray-200 list-disc list-inside space-y-1 text-sm md:text-base">
                     <li>Contributed to organizing tech events and workshops</li>
                     <li>Assisted in managing the club's social media presence</li>
+                    <li>Made and currently managing club Linkedin Page</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="text-lg md:text-xl font-medium text-cyan-400 mb-2">Aug 2024 - Present (Core Team Member)</h4>
                   <ul className="text-gray-200 list-disc list-inside space-y-1 text-sm md:text-base">
-                    <li>Lead the development of the club's official website</li>
+                    <li>Leading the development of the club's official website</li>
                     <li>Coordinate with other team members to plan and execute tech initiatives</li>
                   </ul>
                 </div>
