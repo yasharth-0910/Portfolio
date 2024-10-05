@@ -335,7 +335,8 @@ export default function Portfolio() {
                       ]},
                       { period: "Aug 2024 - Present", role: "Core Team Member", responsibilities: [
                         "Leading the development of the club's official website",
-                        "Coordinate with other team members to plan and execute tech initiatives"
+                        "Coordinate with other team members to plan and execute tech initiatives",
+                        "Build Entire TechTonic 1.0 website for the club workshop"
                       ]}
                     ].map((item, index) => (
                       <motion.div 
