@@ -312,56 +312,132 @@ export default function Portfolio() {
                 </motion.div>
               )}
               {section === 'responsibilities' && (
-                <motion.div
-                  className="bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                >
-                  <motion.h3 
-                    className="text-xl md:text-2xl font-semibold mb-4 text-cyan-300"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
+                <>
+                  <motion.div
+                    className="bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
                   >
-                    CICR
-                  </motion.h3>
-                  <div className="space-y-6">
-                    {[
-                      { period: "2023 - Aug 2024", role: "Volunteer", responsibilities: [
-                        "Contributed to organizing tech events and workshops",
-                        "Assisted in managing the club's social media presence",
-                        "Made and currently managing club Linkedin Page"
-                      ]},
-                      { period: "Aug 2024 - Present", role: "Core Team Member", responsibilities: [
-                        "Leading the development of the club's official website",
-                        "Coordinate with other team members to plan and execute tech initiatives",
-                        "Build Entire TechTonic 1.0 website for the club workshop"
-                      ]}
-                    ].map((item, index) => (
-                      <motion.div 
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.7 + index * 0.2 }}
-                      >
-                        <h4 className="text-lg md:text-xl font-medium text-cyan-400 mb-2">{item.period} ({item.role})</h4>
-                        <ul className="text-gray-200 list-disc list-inside space-y-1 text-sm md:text-base">
-                          {item.responsibilities.map((resp, i) => (
-                            <motion.li 
-                              key={i}
-                              initial={{ opacity: 0, x: -20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ duration: 0.3, delay: 0.9 + index * 0.2 + i * 0.1 }}
-                            >
-                              {resp}
-                            </motion.li>
-                          ))}
-                        </ul>
-                      </motion.div>
-                    ))}
-                  </div>
-                </motion.div>
+                    <motion.h3
+                      className="text-xl md:text-2xl font-semibold mb-4 text-cyan-300"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                    >
+                      CICR
+                    </motion.h3>
+                    <div className="space-y-6">
+                      {[
+                        {
+                          period: "Aug 2024 - Present",
+                          role: "Core Team Member",
+                          responsibilities: [
+                            "Leading the development of the club's official website",
+                            "Coordinating with team members to execute tech initiatives",
+                            "Built the TechTonic 1.0 website for the club workshop",
+                          ],
+                        },
+                        {
+                          period: "2023 - Aug 2024",
+                          role: "Volunteer",
+                          responsibilities: [
+                            "Organized tech events and workshops",
+                            "Managed the club's social media presence",
+                            "Created and maintained the club's LinkedIn page",
+                          ],
+                        },
+                      ].map((item, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{
+                            duration: 0.5,
+                            delay: 0.7 + index * 0.2,
+                          }}
+                        >
+                          <h4 className="text-lg md:text-xl font-medium text-cyan-400 mb-2">
+                            {item.period} ({item.role})
+                          </h4>
+                          <ul className="text-gray-200 list-disc list-inside space-y-1 text-sm md:text-base">
+                            {item.responsibilities.map((resp, i) => (
+                              <motion.li
+                                key={i}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{
+                                  duration: 0.3,
+                                  delay: 0.9 + index * 0.2 + i * 0.1,
+                                }}
+                              >
+                                {resp}
+                              </motion.li>
+                            ))}
+                          </ul>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
+              
+                  <motion.div
+                    className="bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg mt-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    <motion.h3
+                      className="text-xl md:text-2xl font-semibold mb-4 text-cyan-300"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                    >
+                      JODC
+                    </motion.h3>
+                    <div className="space-y-6">
+                      {[
+                        {
+                          period: "Oct 2024 - Present",
+                          role: "Core Team Member",
+                          responsibilities: [
+                            "Contributing to open-source projects",
+                            "Future Participating in coding sessions and workshops",
+                            "Collaborating with peers on development initiatives",
+                          ],
+                        },
+                      ].map((item, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{
+                            duration: 0.5,
+                            delay: 0.7 + index * 0.2,
+                          }}
+                        >
+                          <h4 className="text-lg md:text-xl font-medium text-cyan-400 mb-2">
+                            {item.period} ({item.role})
+                          </h4>
+                          <ul className="text-gray-200 list-disc list-inside space-y-1 text-sm md:text-base">
+                            {item.responsibilities.map((resp, i) => (
+                              <motion.li
+                                key={i}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{
+                                  duration: 0.3,
+                                  delay: 0.9 + index * 0.2 + i * 0.1,
+                                }}
+                              >
+                                {resp}
+                              </motion.li>
+                            ))}
+                          </ul>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
+                </>
               )}
               {section === 'resume' && (
                 <motion.a 
