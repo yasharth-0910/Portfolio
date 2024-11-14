@@ -325,26 +325,17 @@ export default function Portfolio() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 0.5 }}
                     >
-                      CICR
+                      JODC
                     </motion.h3>
                     <div className="space-y-6">
                       {[
                         {
-                          period: "Aug 2024 - Present",
+                          period: "Oct 2024 - Present",
                           role: "Core Team Member",
                           responsibilities: [
-                            "Leading the development of the club's official website",
-                            "Coordinating with team members to execute tech initiatives",
-                            "Built the TechTonic 1.0 website for the club workshop",
-                          ],
-                        },
-                        {
-                          period: "2023 - Aug 2024",
-                          role: "Volunteer",
-                          responsibilities: [
-                            "Organized tech events and workshops",
-                            "Managed the club's social media presence",
-                            "Created and maintained the club's LinkedIn page",
+                            "Contributing to open-source projects",
+                            "Future Participating in coding sessions and workshops",
+                            "Collaborating with peers on development initiatives",
                           ],
                         },
                       ].map((item, index) => (
@@ -392,17 +383,26 @@ export default function Portfolio() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 0.5 }}
                     >
-                      JODC
+                      CICR
                     </motion.h3>
                     <div className="space-y-6">
                       {[
                         {
-                          period: "Oct 2024 - Present",
+                          period: "Aug 2024 - Present",
                           role: "Core Team Member",
                           responsibilities: [
-                            "Contributing to open-source projects",
-                            "Future Participating in coding sessions and workshops",
-                            "Collaborating with peers on development initiatives",
+                            "Leading the development of the club's official website",
+                            "Coordinating with team members to execute tech initiatives",
+                            "Built the TechTonic 1.0 website for the club workshop",
+                          ],
+                        },
+                        {
+                          period: "2023 - Aug 2024",
+                          role: "Volunteer",
+                          responsibilities: [
+                            "Organized tech events and workshops",
+                            "Managed the club's social media presence",
+                            "Created and maintained the club's LinkedIn page",
                           ],
                         },
                       ].map((item, index) => (
